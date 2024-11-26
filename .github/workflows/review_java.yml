@@ -1,7 +1,8 @@
 name: Review Java Code
 
 on:
-  workflow_dispatch:
+  repository_dispatch:
+    types: [review-java]
 
 jobs:
   review:
@@ -10,6 +11,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+      with:
+        ref: ${{ github.event.client_payload.ref }}
 
     - name: Set up Elixir
       uses: erlef/setup-elixir@v1
