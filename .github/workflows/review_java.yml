@@ -25,7 +25,6 @@ jobs:
 
     - name: Run Java Review
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
         AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
       run: mix review_java
