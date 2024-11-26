@@ -1,9 +1,7 @@
 name: Review Java Code
 
 on:
-  pull_request:
-    paths:
-      - '**/*.java'
+  workflow_dispatch:
 
 jobs:
   review:
